@@ -8,7 +8,7 @@ const TrendyProducts = () => {
 
   }
   return (
-    <section className='mt-25 mb-10'>
+    <section className='mt-25'>
         <Container>
             <h1 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h1>
             <ul className='flex justify-center gap-13.5'>
