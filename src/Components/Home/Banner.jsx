@@ -10,7 +10,7 @@ const Slider = SliderLib.default || SliderLib;
     dots: true,
     infinite: true,
     arrows: false,
-    speed: 400,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots) => (
