@@ -1,24 +1,28 @@
 import React from 'react'
 import Image from './Image'
 import ProductImage from '../../Assets/Images/productimage.png'
-const Product = () => {
+const Product = ({item}) => {
     return (
         <div className='max-w-82.5 relative'>
             <div className='group'>
-                <Image src={ProductImage} alt="Product" />
-                <div className='bg-white group-hover:bottom-30 duration-200 group-hover:visible text-center absolute w-77.5 left-2/4 translate-x-[-50%] pt-4 pb-2.5 bottom-20 invisible'>
+                <Image src={item?.thumbnail || ProductImage} alt="Product" />
+                <div className='bg-white shadow shadow-gray-200 group-hover:bottom-30 duration-200 group-hover:visible text-center absolute w-77.5 left-2/4 translate-x-[-50%] pt-4 pb-2.5 bottom-20 invisible'>
                     <button className='font-jost font-medium text-sm leading-6'>ADD TO CART</button>
                 </div>
             </div>
 
             <div className='flex justify-between'>
                 <div>
-                    <h3 className='font-jost font-normal text-sm leading-6 text-fifth-color mt-3.5'>Dresses</h3>
-                    <h2 className='font-jost font-normal text-base text-primary-black mt-2.5'>Cropped Faux Leather Jacket</h2>
+                    <h3 className='font-jost font-normal text-sm leading-6 text-fifth-color mt-3.5'>{item?.category}</h3>
+                    <h2 className='font-jost font-normal text-base text-primary-black mt-2.5'>{item?.title}</h2>
 
                     <div className='flex gap-2.5'>
-                        <del className='font-jost font-normal text-base text-primary-black'>$39</del>
-                        <h4 className='font-jost font-normal text-base text-red'>$29</h4>
+                        {
+                            item?.discountprice &&
+                            <del className='font-jost font-normal text-base text-primary-black'>${item?.discountprice}</del>
+                        }
+                        
+                        <h4 className={`${item.discountprice ? 'font-jost font-normal text-base text-red' : 'font-jost font-normal text-base text-primary-black'}`}>${item?.price}</h4>
                     </div>
                 </div>
             

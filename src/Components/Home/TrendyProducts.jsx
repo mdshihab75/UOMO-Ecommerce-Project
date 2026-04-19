@@ -6,11 +6,11 @@ import Product from '../Common/Product'
 import axios from 'axios'
 const TrendyProducts = () => {
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("all")
+  const [category, setCategory] = useState(1)
 
-  const handleActive = () => {
-    alert("shihab");
-  }
+  const handleActive = (id) => {
+    setCategory(id)
+  };
 
   useEffect(() => {
     function getProducts () {
@@ -22,19 +22,16 @@ const TrendyProducts = () => {
     }
 
     getProducts()
-
-  }, [])
-  
-  
+  }, []) 
   return (
-    <section className='mt-25'>
+    <section className='mt-25 mb-40'>
       <Container>
         <h2 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 
         <ul className='flex justify-center gap-13.5 mt-7.5'>
           {
             productCategory?.map((item) => (
-              <Listitem onClick={handleActive} className="font-jost font-medium text-[16px] text-fifth-color">
+              <Listitem  onClick={()=>handleActive(item.id)} className={`${category == item.id ? "font-jost font-medium cursor-pointer text-[16px] text-primary-black  after:bg-primary-black relative after:content-[''] after:h-0.5 after:left-0 after:bottom-0 after:absolute after:w-[75%] after:duration-300;" : "font-jost font-medium cursor-pointer text-[16px] text-fifth-color"}`}>
                 {item.name}</Listitem>
             ))
           }
@@ -42,7 +39,7 @@ const TrendyProducts = () => {
 
         <div className='grid grid-cols-4 gap-x-7.5 gap-y-15 mt-10'>
           {products?.map((item) => (
-            <Product key={item.id} title={item.title} price={item.price} discount={item.discountPercentage} rating={item.rating} image={item.thumbnail} />
+            <Product item={item} key={item.id}/>
           ))}
           <Product />
         </div>
