@@ -44,7 +44,10 @@ const TrendyProducts = () => {
           {category == "all"
             ? products.map((item) => <Product item={item} key={item.id} />)
             : filterProduct.map((item) => <Product item={item} key={item.id} />)}
-            
+
+        </div>
+        <div className='text-center'>
+          <button className="font-jost font-medium text-sm leading-6 text-primary-black after:bg-primary-black relative after:content-[''] after:h-0.5 after:w-0 after:left-0 after:bottom-0 after:absolute hover:after:w-[80%] after:duration-300 mt-10.5">SEE ALL PRODUCT</button>
         </div>
       </Container>
     </section>
