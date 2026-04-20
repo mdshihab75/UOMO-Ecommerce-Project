@@ -8,6 +8,7 @@ const TrendyProducts = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("all")
   const [filterProduct, setFilterProduct] = useState([])
+  const [productLimit, setProductLimit] = useState([])
 
   const handleActive = (name) => {
     setCategory(name)
@@ -15,19 +16,36 @@ const TrendyProducts = () => {
     setFilterProduct(filterProduct)
   };
 
-  useEffect(() => {
-    function getProducts() {
-      axios.get("https://dummyjson.com/products").then((res) => {
-        setProducts(res.data.products)
-      }).catch((err) => {
-        throw new Error(err.message ? err.message : "Something went wrong");
-      })
-    }
+  function getProducts() {
+    axios.get("https://dummyjson.com/products").then((res) => {
+      setProducts(res.data.products)
+    }).catch((err) => {
+      throw new Error(err.message ? err.message : "Something went wrong");
+    })
+  }
 
+
+  useEffect(() => {
     getProducts()
   }, [])
+
+  useEffect(() => {
+    const limit = products.slice(0, 8);
+    setProductLimit(limit)
+  }, [products])
+
+  const handleActiveSeeAllProduct = () => {
+    const limit = products.slice(0, products.length - 1)
+    setProductLimit(limit)
+  }
+
+  const handleActiveSeeLessProduct = () => {
+    const limit = products.slice(0, 8);
+    setProductLimit(limit)
+  }
+
   return (
-    <section className='mt-25 mb-40'>
+    <section className='mt-25 mb-25'>
       <Container>
         <h2 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 
@@ -42,12 +60,17 @@ const TrendyProducts = () => {
 
         <div className='grid grid-cols-4 gap-x-7.5 gap-y-15 mt-10'>
           {category == "all"
-            ? products.map((item) => <Product item={item} key={item.id} />)
-            : filterProduct.map((item) => <Product item={item} key={item.id} />)}
-
+            ? productLimit.map((item) => <Product item={item} key={item.id} />)
+            : filterProduct.map((item) => (<Product item={item} key={item.id} />))}
         </div>
+
         <div className='text-center'>
-          <button className="font-jost font-medium text-sm leading-6 text-primary-black after:bg-primary-black relative after:content-[''] after:h-0.5 after:w-0 after:left-0 after:bottom-0 after:absolute hover:after:w-[80%] after:duration-300 mt-10.5">SEE ALL PRODUCT</button>
+          {productLimit.length > 8 ? (
+            <button onClick={handleActiveSeeLessProduct} className="font-jost font-medium text-sm leading-6 text-primary-black after:bg-primary-black relative after:content-[''] after:h-0.5 after:w-0 after:left-0 after:bottom-0 after:absolute hover:after:w-[80%] after:duration-300 mt-10.5 cursor-pointer">SEE LESS PRODUCT</button>
+          ) : (
+            <button onClick={handleActiveSeeAllProduct} className="font-jost font-medium text-sm leading-6 text-primary-black after:bg-primary-black relative after:content-[''] after:h-0.5 after:w-0 after:left-0 after:bottom-0 after:absolute hover:after:w-[80%] after:duration-300 mt-10.5 cursor-pointer">SEE ALL PRODUCT</button>
+          )}
+
         </div>
       </Container>
     </section>

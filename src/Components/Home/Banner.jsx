@@ -20,7 +20,7 @@ const Slider = SliderLib.default || SliderLib;
     ),
 
     customPaging: i => (
-      <div className='w-1.5 h-1.5 rounded-full bg-fourth-color'></div>
+      <div className='w-1.5 h-1.5 rounded-full bg-fourth-color cursor-pointer'></div>
     )
  
 };
@@ -47,7 +47,7 @@ const Slider = SliderLib.default || SliderLib;
         <FaPinterest />
       </a>
       
-       <span className="font-jost font-medium text-sm leading-6 text-fifth-color rotate-270 tracking-widest mt-6">
+       <span className="font-jost font-medium text-sm leading-6 text-fifth-color rotate-270 tracking-widest mt-8">
         FOLLOW US
       </span>
 
