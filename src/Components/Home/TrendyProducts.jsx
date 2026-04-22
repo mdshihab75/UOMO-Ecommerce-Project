@@ -45,7 +45,7 @@ const TrendyProducts = () => {
   }
 
   return (
-    <section className='mt-25 mb-25'>
+    <section className='mt-25'>
       <Container>
         <h2 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 
