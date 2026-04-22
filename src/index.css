@@ -3,11 +3,13 @@
 @theme {
   --font-jost: "Jost", sans-serif;
   --color-primary-black: #222222; 
+  --color-secondary: #767676;
   --color-third-color: #B9A16B;
   --color-primary-white: #FFFFFF; 
   --color-fourth-color: #DDC2B9;
   --color-fifth-color: #767676;
   --color-sixth-color: #C32929;
+  --color-seventh-color: #EBEBEB;
   --color-red: #D6001C
 }
 
