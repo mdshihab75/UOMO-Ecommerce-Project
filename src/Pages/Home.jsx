@@ -4,6 +4,7 @@ import Category from '../Components/Home/Category';
 import TrendyProducts from '../Components/Home/TrendyProducts';
 import SpringCollection from '../Components/Home/SpringCollection';
 import StartingCollection from '../Components/Home/StartingCollection';
+import LimitedProduct from '../Components/Home/LimitedProduct';
 
 const Home = () => {
   return (
@@ -13,8 +14,8 @@ const Home = () => {
     <TrendyProducts/>
     <SpringCollection/>
     <StartingCollection/>
+    <LimitedProduct/>
     </>
-    
   )
 }
 

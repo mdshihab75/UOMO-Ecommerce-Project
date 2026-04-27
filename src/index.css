@@ -32,3 +32,7 @@
 .slick-active div {
     @apply bg-primary-black;
 }
+
+.slick-active div {
+    background-color: var(--color-primary-white) !important;
+}
