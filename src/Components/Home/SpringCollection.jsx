@@ -17,8 +17,7 @@ const SpringCollection = () => {
                             <span className='font-bold'>Spring </span>Collection
                         </h2>
                         <Link className="font-jost font-medium text-sm leading-6 mb-29.5 mt-2.25 inline-block text-primary-black relative after:bg-primary-black after:content-[''] after:h-0.5 after:w-0 after:left-0 after:bottom-0 after:absolute hover:after:w-[65%] after:duration-300">SHOP NOW</Link>
-                        <Countdown
-                            date={Date.now() + 5000000}
+                        <Countdown date={new Date("2026-05-10")}
                             renderer={({ days, hours, minutes, seconds, completed }) => {
                                 return (
                                     <div className='flex mb-9'>
