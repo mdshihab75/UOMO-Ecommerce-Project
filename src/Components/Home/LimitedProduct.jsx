@@ -11,12 +11,10 @@ const LimitedProduct = () => {
     const [products, setProducts] = useState([])
     const Slider = SliderLib.default || SliderLib;
 
-    function SampleNextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div
-      className= {`${className} absolute right-0 top-1/2 translate-y-[-50%]`}
-      
+function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+    <div className= {`${className} absolute -right-12.25 top-1/2 translate-y-[-50%]`}
       onClick={onClick}
     ><TfiAngleRight className='text-[25px]'/></div>
   );
@@ -25,9 +23,7 @@ const LimitedProduct = () => {
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
   return (
-    <div
-      className={`${className} absolute left-0 top-1/2 translate-y-[-50%] z-10`}
-      
+    <div className={`${className} absolute -left-12.25 top-1/2 translate-y-[-50%] z-10`}
       onClick={onClick}
     ><TfiAngleLeft className='text-[25px]'/></div>
   );
@@ -51,7 +47,7 @@ function getProducts() {
     }).catch((err) => {
       throw new Error(err.message ? err.message : "Something went wrong");
     })
-  };
+  }
 
 
   useEffect(() => {
@@ -63,7 +59,7 @@ function getProducts() {
   return (
     <section className='mt-22.75 mb-22'>
         <Container>
-            <h2 className='font-jost font-normal text-[35px] text-primary-black text-center'>LIMITED <span className='font-bold'>EDITION</span></h2>
+            <h2 className='font-jost font-normal text-[35px] text-primary-black text-center mb-8.25'>LIMITED <span className='font-bold'>EDITION</span></h2>
             <Slider {...settings} className='bg-transparent'>
                 {
                 products?.map((item) => (

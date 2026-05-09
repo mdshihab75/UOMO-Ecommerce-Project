@@ -27,7 +27,7 @@ const Banner = () => {
 
   return (
 
-    <section className='mx-15'>
+    <section id='banner' className='mx-15'>
 
       <div className="absolute -left-3 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center  z-10">
 
