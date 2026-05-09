@@ -57,7 +57,7 @@ function getProducts() {
   
 
   return (
-    <section className='mt-22.75 mb-22'>
+    <section className='mt-22.75'>
         <Container>
             <h2 className='font-jost font-normal text-[35px] text-primary-black text-center mb-8.25'>LIMITED <span className='font-bold'>EDITION</span></h2>
             <Slider {...settings} className='bg-transparent'>
