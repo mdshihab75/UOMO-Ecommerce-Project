@@ -39,3 +39,7 @@
 .slick-active div {
     @apply bg-primary-white;
 }
+
+.list-items {
+    @apply font-jost font-medium text-base text-primary-black relative after:content-[''] after:absolute after:bg-primary-black after:w-0 hover:after:w-[40%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300
+}
