@@ -1,7 +1,12 @@
 import React from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import Container from '../ui/Container';
-const SortAndView = () => {
+const SortAndView = ({setView}) => {
+
+  let viewProduct = [2,3,4]
+  const handleView = (view) =>  {
+    setView(view)
+  }
   return (
     
   
@@ -20,22 +25,15 @@ const SortAndView = () => {
       {/* View */}
       <div className='flex gap-4.5 items-center relative after:content-[""] after:absolute after:w-0.5 after:h-5.5 after:bg-ftbg after:top-1/2 after:-translate-y-1/2 after:-right-5.75'>
         <h3 className='font-jost font-medium text-sm text-primary-black leading-6 mr-2.75'>VIEW</h3>
-
-        <button className='button-list'>
-          2
-        </button>
-
-        <button className='button-list'>
-          3
-        </button>
-
-        <button className='button-list'>
-          4
-        </button>
+          {
+            viewProduct?.map((item) => (
+                <button onClick={() => handleView(item)} className='button-list'>{item}</button>
+            ))
+          }
       </div>
-      <div className='flex items-center'>
+      <div className='flex gap-2.5 items-center cursor-pointer'>
           <IoFilterSharp />
-        <h3 className='font-jost font-medium text-sm text-primary-black leading-6 ml-2.5'>FILTER</h3>
+        <h3 className='font-jost font-medium text-sm text-primary-black leading-6'>FILTER</h3>
       </div>
     </div>
   
