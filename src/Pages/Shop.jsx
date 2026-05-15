@@ -34,6 +34,12 @@ const Shop = () => {
             </div>
         </Container>
         <AllProducts items={products} view={view}/>
+        <div className='w-75  h-1.5 mx-auto bg-ftbg rounded-[10px] mt-20 mb-35.75'>
+            <div className='w-2/4 h-full bg-primary-black rounded-[10px]'>
+
+            </div>
+            <button className='btn'>SHOW MORE</button>
+        </div>
     </main>
   )
 }
