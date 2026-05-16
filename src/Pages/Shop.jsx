@@ -5,6 +5,7 @@ import SortAndView from '../Components/shop/Sort&View'
 import Container from '../Components/ui/Container'
 import axios from 'axios'
 import AllProducts from '../Components/shop/AllProducts'
+import { Link } from 'react-router'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -17,7 +18,6 @@ const Shop = () => {
       throw new Error(err.message ? err.message : "Something went wrong");
     })
   }
-
 
   useEffect(() => {
     getProducts()
@@ -38,7 +38,9 @@ const Shop = () => {
             <div className='w-2/4 h-full bg-primary-black rounded-[10px]'>
 
             </div>
-            <button className='btn'>SHOW MORE</button>
+            
+              <Link className='font-jost font-medium inline-block left-2/4 -translate-x-2/4 text-sm top-4.25 text-primary-black leading-6 relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[70%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300'>SHOW MORE</Link>
+
         </div>
     </main>
   )
