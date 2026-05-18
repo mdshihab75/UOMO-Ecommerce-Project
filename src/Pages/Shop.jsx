@@ -11,6 +11,11 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
   const [view, setView] = useState(4);
 
+  let totalProduct = products.length
+  let showproduct = 50;
+
+  let result = Math.round((showproduct/ totalProduct) * 100) 
+
   function getProducts() {
     axios.get("https://dummyjson.com/products?page=1&limit=60").then((res) => {
       setProducts(res.data.products)
@@ -22,7 +27,7 @@ const Shop = () => {
   useEffect(() => {
     getProducts()
   }, [])
-
+ 
 
   return (
     <main>
@@ -35,12 +40,12 @@ const Shop = () => {
         </Container>
         <AllProducts items={products} view={view}/>
         <div className='w-75  h-1.5 mx-auto bg-ftbg rounded-[10px] mt-20 mb-35.75'>
-            <div className='w-2/4 h-full bg-primary-black rounded-[10px]'>
+            <div style={{width: `${result}%`}} className={`h-full bg-primary-black rounded-[10px]`}>
 
             </div>
             
               <Link className='font-jost font-medium inline-block left-2/4 -translate-x-2/4 text-sm top-4.25 text-primary-black leading-6 relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[70%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300'>SHOW MORE</Link>
-              <p>Hellow World</p>
+              
         </div>
     </main>
   )

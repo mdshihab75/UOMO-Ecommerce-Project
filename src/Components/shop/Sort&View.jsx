@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import Container from '../ui/Container';
 const SortAndView = ({setView}) => {
-
   let viewProduct = [2,3,4]
+  const [filterModal, setFilterModal] = useState(false)
   const handleView = (view) =>  {
     setView(view)
   }
@@ -31,13 +31,19 @@ const SortAndView = ({setView}) => {
             ))
           }
       </div>
-      <div className='flex gap-2.5 items-center cursor-pointer'>
+
+      {/*Filter*/}
+      <div onClick={() => setFilterModal(!filterModal)} className='flex gap-2.5 items-center cursor-pointer'>
           <IoFilterSharp />
         <h3 className='font-jost font-medium text-sm text-primary-black leading-6'>FILTER</h3>
       </div>
+      
+        <div className={`fixed duration-300 ${filterModal ? 'w-105' : 'w-0'} h-full bg-gray-300 z-50 top-0 right-0`}>
+        </div>
+     
+      
     </div>
-  
-    
+
   )
 }
 
