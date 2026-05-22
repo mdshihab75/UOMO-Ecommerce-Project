@@ -43,9 +43,9 @@ const Shop = () => {
             <div style={{width: `${result}%`}} className={`h-full bg-primary-black rounded-[10px]`}>
 
             </div>
-            
-              <Link className='font-jost font-medium inline-block left-2/4 -translate-x-2/4 text-sm top-4.25 text-primary-black leading-6 relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[70%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300'>SHOW MORE</Link>
-              
+            <div className='text-center'>
+                <Link className='font-jost font-medium text-sm top-4.25 text-primary-black leading-6 relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[70%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300'>SHOW MORE</Link>
+            </div>
         </div>
     </main>
   )

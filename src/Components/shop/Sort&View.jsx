@@ -63,7 +63,7 @@ const SortAndView = ({ setView }) => {
         <h3 className='font-jost font-medium text-sm text-primary-black leading-6'>FILTER</h3>
       </div>
 
-      <div className={`fixed top-0 right-0 h-screen overflow-y-auto bg-primary-white z-50 duration-300 overflow-hidden ${filterModal ? "w-[420px]" : "w-0"
+      <div className={`fixed top-0 right-0 h-screen overflow-y-auto bg-primary-white z-50 duration-300 overflow-hidden ${filterModal ? "w-105" : "w-0"
         }`}>
         <div className='bg-filterbg px-10'>
           <div className='flex items-center justify-between pt-8.25 pb-6.5'>
@@ -220,15 +220,6 @@ const SortAndView = ({ setView }) => {
       </div>
 
     </div>
-
-
-
-
-
-
-
-
-
 
   )
 }
