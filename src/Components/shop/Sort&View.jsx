@@ -175,7 +175,7 @@ const SortAndView = ({ setView }) => {
         {/* Price */}
         <div className="mt-10 px-10">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold uppercase">Price</h3>
+            <h3 className="font-jost font-medium text-[18px] text-primary-black">PRICE</h3>
 
             <span className="text-gray-500">⌃</span>
           </div>
@@ -197,7 +197,6 @@ const SortAndView = ({ setView }) => {
             <p>Max Price: $937</p>
           </div>
         </div>
-
 
         {/* Tags */}
         <div className="flex flex-wrap gap-4.25 mt-8 px-10 mb-50">
