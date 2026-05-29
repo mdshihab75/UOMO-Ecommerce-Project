@@ -6,7 +6,7 @@ const AllProducts = ({items, view}) => {
   return (
     <section>
         <Container>
-            <div className={`grid grid-cols-${view} gap-x-7.5 gap-y-15`}>
+            <div style={{ gridTemplateColumns : `${view  == 2 ? "1fr 1fr" : view == 3 ? "1fr 1fr 1fr" : "1fr 1fr 1fr 1fr"}`}} className={`grid gap-x-7.5 gap-y-15`}>
                 {
                 items?.map((item) => (
                     <Product item={item}/>
