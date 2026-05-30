@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import Container from '../ui/Container';
 import { IoMdClose } from "react-icons/io";
@@ -10,6 +10,13 @@ const SortAndView = ({ setView }) => {
   const handleView = (view) => {
     setView(view)
   }
+  let filterRef = useRef (null)
+  useEffect (() => {
+    window.addEventListener ("mousedown", function (){
+      alert('shihab')
+    })
+  },[])
+
   const colors = [
     "bg-blue-900",
     "bg-yellow-500",
