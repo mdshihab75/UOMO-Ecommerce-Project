@@ -10,12 +10,17 @@ const SortAndView = ({ setView }) => {
   const handleView = (view) => {
     setView(view)
   }
-  let filterRef = useRef (null)
+  let filterRef = useRef ()
   useEffect (() => {
-    window.addEventListener ("mousedown", function (){
-      alert('shihab')
+    window.addEventListener ("mousedown", function (e){
+      if (e.target.contains(filterRef.current)){
+        setFilterModal(false)
+      }
+      else {
+        setFilterModal(true)
+      }
     })
-  },[])
+  },[filterModal])
 
   const colors = [
     "bg-blue-900",
@@ -65,7 +70,8 @@ const SortAndView = ({ setView }) => {
       </div>
 
       {/*Filter*/}
-      <div onClick={() => setFilterModal(!filterModal)} className='flex gap-2.5 items-center cursor-pointer'>
+      <div ref={filterRef}>
+        <div  className='flex gap-2.5 items-center cursor-pointer'>
         <IoFilterSharp />
         <h3 className='font-jost font-medium text-sm text-primary-black leading-6'>FILTER</h3>
       </div>
@@ -225,6 +231,7 @@ const SortAndView = ({ setView }) => {
         </div>
       </div>
 
+      </div>
     </div>
 
   )
