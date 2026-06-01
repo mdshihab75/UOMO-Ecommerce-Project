@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { IoFilterSharp } from "react-icons/io5";
 import Container from '../ui/Container';
 import { IoMdClose } from "react-icons/io";
-
 import { IoSearchOutline } from "react-icons/io5";
+import { Range } from "react-range";
 const SortAndView = ({ setView }) => {
   let viewProduct = [2, 3, 4]
   const [filterModal, setFilterModal] = useState(false)
