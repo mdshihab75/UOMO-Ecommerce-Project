@@ -189,7 +189,7 @@ const SortAndView = ({ setView }) => {
           {/* Price */}
           <div className="mt-10 px-10">
             <div className="flex items-center justify-between">
-              <h3 className="font-jost font-medium text-[18px] text-primary-black">PRICE</h3>
+              <h3 className="font-jost font-medium text-[18px] text-primary-black mb-2.75">PRICE</h3>
 
               <span className="text-gray-500">⌃</span>
             </div>
@@ -232,7 +232,7 @@ const SortAndView = ({ setView }) => {
               )}
             />
 
-            <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center justify-between mt-3">
               <p className='font-jost font-normal text-sm leading-10 text-secondary'>Min Price: <span className='text-primary-black'> $29</span></p>
 
               <p className='font-jost font-normal text-sm leading-10 text-secondary'>Max Price: <span className='text-primary-black'> $937</span></p>
@@ -240,7 +240,7 @@ const SortAndView = ({ setView }) => {
           </div>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-4.25 mt-8 px-10 mb-50">
+          <div className="flex flex-wrap gap-4.25 mt-5 px-10 mb-50">
             <button className="px-3 py-2 bg-filtertext font-jost font-normal text-[11px] text-primary-black leading-7.5">
               ✕ <span className='ml-2.5'>BLUES</span>
             </button>
