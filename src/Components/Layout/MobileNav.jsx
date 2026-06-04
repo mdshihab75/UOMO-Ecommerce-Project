@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { Link } from 'react-router'
 import Image from '../Common/Image'
 import { IoMdClose } from "react-icons/io";
+import { navitems } from '../../Api/NavbarData';
 const MobileNav = () => {
     const cartItems = 3;
-    const [mobileMenu, setmobileMenu] = useState (false)
+    const [mobileMenu, setmobileMenu] = useState(false)
     return (
         <div className='mobile-nav flex justify-between mx-3.75 items-center md:hidden'>
-            <button onClick={()=> setmobileMenu(true)}>
+            <button onClick={() => setmobileMenu(true)}>
                 <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.0435" height="2" fill="#222222" />
                     <rect y="8" width="20.0348" height="2" fill="#222222" />
@@ -29,9 +30,18 @@ const MobileNav = () => {
                 mobileMenu &&
                 <div className='absolute top-0 left-0 w-full h-screen bg-primary-white'>
                     <button className='absolute right-5 top-5' onClick={() => setmobileMenu(false)}>
-                        <IoMdClose size={30}/>
+                        <IoMdClose size={30} />
                     </button>
-                    </div>
+                    <ul className="flex flex-col gap-10 p-10">
+                        {
+                            navitems?.map((items) => (
+                                <li className="list-item" key={items.Id}>
+                                    <Link to={items.url}>{items.Name}</Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             }
         </div>
 

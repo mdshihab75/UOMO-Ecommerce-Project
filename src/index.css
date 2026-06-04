@@ -27,7 +27,7 @@
 }
 
 #banner .slick-dots .slick-active {
-    @apply flex h-7.5 w-7.5 items-center rounded-full border justify-center border-primary-black;
+    @apply flex h-5 w-5 md:h-7.5 md:w-7.5 items-center rounded-full border justify-center border-primary-black;
 }
 
 #banner .slick-dots ul {

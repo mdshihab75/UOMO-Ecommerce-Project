@@ -17,41 +17,44 @@ const Banner = () => {
     slidesToScroll: 1,
     appendDots: (dots) => (
       <div>
-        <ul className='flex gap-10 absolute bottom-15 left-48.75' >{''} {dots} {''} </ul>
+        <ul className='flex absolute gap-3 md:gap-10 bottom-5 left-10 md:bottom-15 md:left-48.75' >{''} {dots} {''} </ul>
       </div>
     ),
 
     customPaging: i => (
       <div className='w-1.5 h-1.5 rounded-full bg-fourth-color cursor-pointer'></div>
-    )};
+    )
+  };
 
   return (
 
-    <section id='banner' className='mx-15'>
+    <section id='banner' className='md:mx-15'>
+      <div className='hidden md:block'>
+        <div className="absolute -left-3 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center  z-10">
 
-      <div className="absolute -left-3 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center  z-10">
+          <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center ">
+            <FaFacebookF />
+          </a>
 
-        <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center ">
-          <FaFacebookF />
-        </a>
+          <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center">
+            <FaTwitter />
+          </a>
 
-        <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center">
-          <FaTwitter />
-        </a>
+          <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center ">
+            <FaInstagram />
+          </a>
 
-        <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center ">
-          <FaInstagram />
-        </a>
+          <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center">
+            <FaPinterest />
+          </a>
 
-        <a href="#" className="w-13 h-15 flex font-normal text-sm text-fifth-color items-center justify-center">
-          <FaPinterest />
-        </a>
+          <span className="font-jost font-medium text-sm leading-6 text-fifth-color rotate-270 tracking-widest mt-8">
+            FOLLOW US
+          </span>
 
-        <span className="font-jost font-medium text-sm leading-6 text-fifth-color rotate-270 tracking-widest mt-8">
-          FOLLOW US
-        </span>
-
+        </div>
       </div>
+
 
       <Slider {...settings}>
         {
