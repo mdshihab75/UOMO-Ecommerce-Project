@@ -8,7 +8,7 @@ const Category = () => {
   return (
     <section className='mt-25'>
         <Container>
-            <div className='grid grid-cols-4 gap-7.5'>
+            <div className='grid grid-cols-4 grid-rows-2 gap-7.5'>
                 { CategoryData?.map((item) => (
                 <div key={item.id} className={`h-full w-full relative ${item.id == 1 && "col-span-2 row-span-2"} ${item.id == 2 && "col-span-2 row-span-1"}`}>
                     <Image className="w-full h-full" src={item.Image} alt={item.name}/>
