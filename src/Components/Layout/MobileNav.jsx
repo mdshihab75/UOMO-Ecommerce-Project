@@ -28,7 +28,7 @@ const MobileNav = () => {
             </div>
             {
                 mobileMenu &&
-                <div className='absolute top-0 left-0 w-full h-screen bg-primary-white'>
+                <div className='absolute top-0 left-0 w-full h-screen bg-primary-white z-50'>
                     <button className='absolute right-5 top-5' onClick={() => setmobileMenu(false)}>
                         <IoMdClose size={30} />
                     </button>

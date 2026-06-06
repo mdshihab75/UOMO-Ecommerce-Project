@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
     <Banner/>
-    {/*<Category/>
-    <TrendyProducts/>
+    <Category/>
+    {/*<TrendyProducts/>
     <SpringCollection/>
     <StartingCollection/>
     <LimitedProduct/>
