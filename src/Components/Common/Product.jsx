@@ -6,7 +6,7 @@ const Product = ({ item }) => {
         <div className='max-w-82.5 relative'>
             <div className='group'>
                 <Image className='w-full' src={item.thumbnail || ProductImage} alt="Product" />
-                <div className='bg-white shadow shadow-gray-100 group-hover:bottom-30 duration-200 group-hover:visible text-center absolute w-77.5 left-2/4 translate-x-[-50%] pt-4 pb-2.5 bottom-20 invisible'>
+                <div className='bg-white shadow shadow-gray-100 group-hover:bottom-30 duration-200 group-hover:visible text-center absolute w-full md:w-77.5 left-2/4 translate-x-[-50%] pt-4 pb-2.5 bottom-20 visible md:invisible'>
                     <button className='font-jost font-medium text-sm leading-6'>ADD TO CART</button>
                 </div>
             </div>
@@ -14,7 +14,7 @@ const Product = ({ item }) => {
             <div className='flex justify-between'>
                 <div>
                     <h3 className='font-jost font-normal text-sm leading-6 text-fifth-color mt-3.5'>{item.category}</h3>
-                    <h2 className='font-jost font-normal text-base text-primary-black mt-2.5'>{item.title}</h2>
+                    <h2 className='font-jost font-normal text-[10px] md:text-base text-primary-black mt-2.5'>{item.title}</h2>
 
                     <div className='flex gap-2.5'>
                         {

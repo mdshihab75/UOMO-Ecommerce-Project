@@ -1,56 +1,57 @@
+
 import React, { useEffect, useState } from 'react'
 import Container from '../ui/Container'
 import Listitem from '../Common/Listitem'
 import { productCategory } from '../../Api/ProductCategory'
 import Product from '../Common/Product'
 import axios from 'axios'
-import MobileTrandyProducts from '../Layout/MobileTrandyProducts'
-const TrendyProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("all")
-  const [filterProduct, setFilterProduct] = useState([])
-  const [productLimit, setProductLimit] = useState([])
 
-  const handleActive = (name) => {
-    setCategory(name)
-    let filterProduct = products.filter((item) => (item.category == name))
-    setFilterProduct(filterProduct)
-  };
-
-  function getProducts() {
-    axios.get("https://dummyjson.com/products").then((res) => {
-      setProducts(res.data.products)
-    }).catch((err) => {
-      throw new Error(err.message ? err.message : "Something went wrong");
-    })
-  }
-
-
-  useEffect(() => {
-    getProducts()
-  }, [])
-
-  useEffect(() => {
-    const limit = products.slice(0, 8);
-    setProductLimit(limit)
-  }, [products])
-
-  const handleActiveSeeAllProduct = () => {
-    const limit = products.slice(0, products.length - 1)
-    setProductLimit(limit)
-  }
-
-  const handleActiveSeeLessProduct = () => {
-    const limit = products.slice(0, 8);
-    setProductLimit(limit)
-  }
-
+const MobileTrandyProducts = () => {
+    const [products, setProducts] = useState([]);
+      const [category, setCategory] = useState("all")
+      const [filterProduct, setFilterProduct] = useState([])
+      const [productLimit, setProductLimit] = useState([])
+    
+      const handleActive = (name) => {
+        setCategory(name)
+        let filterProduct = products.filter((item) => (item.category == name))
+        setFilterProduct(filterProduct)
+      };
+    
+      function getProducts() {
+        axios.get("https://dummyjson.com/products").then((res) => {
+          setProducts(res.data.products)
+        }).catch((err) => {
+          throw new Error(err.message ? err.message : "Something went wrong");
+        })
+      }
+    
+    
+      useEffect(() => {
+        getProducts()
+      }, [])
+    
+      useEffect(() => {
+        const limit = products.slice(0, 8);
+        setProductLimit(limit)
+      }, [products])
+    
+      const handleActiveSeeAllProduct = () => {
+        const limit = products.slice(0, products.length - 1)
+        setProductLimit(limit)
+      }
+    
+      const handleActiveSeeLessProduct = () => {
+        const limit = products.slice(0, 8);
+        setProductLimit(limit)
+      }
+    
   return (
-    <section className='mt-25 hidden md:block'>
+    <section className='mt-9.25 md:mt-25 md:hidden'>
       <Container>
-        <h2 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
+        <h2 className='font-jost font-medium text-[26px] md:text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 
-        <ul className='flex justify-center gap-13.5 mt-7.5'>
+        <ul className='flex flex-wrap md:flex-nowrap justify-center gap-x-11.25 md:gap-13.5 mt-7.5'>
           {
             productCategory?.map((item) => (
               <Listitem key={item.name} onClick={() => handleActive(item.name)} className={`${category == item.name ? "font-jost font-medium cursor-pointer text-[16px] text-primary-black  after:bg-primary-black relative after:content-[''] after:h-0.5 after:left-0 after:bottom-0 after:absolute after:w-[75%] after:duration-300;" : "font-jost font-medium cursor-pointer text-[16px] text-fifth-color"}`}>
@@ -59,7 +60,7 @@ const TrendyProducts = () => {
           }
         </ul>
 
-        <div className='grid grid-cols-4 gap-x-7.5 gap-y-15 mt-10'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-x-7.5 gap-3.75 md:gap-y-15 mt-10'>
           {category == "all"
             ? productLimit.map((item) => <Product item={item} key={item.id} />)
             : filterProduct.map((item) => (<Product item={item} key={item.id} />))}
@@ -78,4 +79,4 @@ const TrendyProducts = () => {
   )
 }
 
-export default TrendyProducts
+export default MobileTrandyProducts

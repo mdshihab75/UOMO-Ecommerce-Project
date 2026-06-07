@@ -3,7 +3,7 @@ import { IoHomeOutline } from "react-icons/io5";
 const MobileNavigation = () => {
     const cartItems = 3;
     return (
-        <div className='py-2.5 bg-primary-white shadow-2xl shadow-gray-500 w-full fixed bottom-0 left-0 md:hidden'>
+        <div className='py-2.5 bg-primary-white shadow-2xl shadow-gray-500 w-full fixed bottom-0 left-0 z-50 md:hidden'>
             <ul className='flex justify-around'>
                 <li className='flex flex-col items-center'>
                     <button><IoHomeOutline size={18} /></button>

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 import Header from './Header'
 import Footer from './Footer'
 import MobileNavigation from './MobileNavigation'
+import MobileTrandyProducts from './MobileTrandyProducts'
 
 const RootLayout = () => {
   return (
@@ -10,6 +11,7 @@ const RootLayout = () => {
     <Header/>
     <Outlet/>
     <MobileNavigation/>
+    <MobileTrandyProducts/>
     {/*<Footer/>*/}
     </>
   )
