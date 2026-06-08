@@ -11,10 +11,10 @@ const Product = ({ item }) => {
                 </div>
             </div>
 
-            <div className='flex justify-between'>
+            <div className='flex justify-between items-start'>
                 <div>
                     <h3 className='font-jost font-normal text-sm leading-6 text-fifth-color mt-3.5'>{item.category}</h3>
-                    <h2 className='font-jost font-normal text-[10px] md:text-base text-primary-black mt-2.5'>{item.title}</h2>
+                    <h2 className='font-jost font-normal text-base text-primary-black mt-2.5'>{item.title.slice(0, 15)} ...</h2>
 
                     <div className='flex gap-2.5'>
                         {

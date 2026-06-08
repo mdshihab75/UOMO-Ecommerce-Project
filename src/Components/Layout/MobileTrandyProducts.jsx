@@ -47,7 +47,7 @@ const MobileTrandyProducts = () => {
       }
     
   return (
-    <section className='mt-9.25 md:mt-25 md:hidden'>
+    <section className='mt-9.25 mb-20 md:mb-0 md:mt-25 block md:hidden'>
       <Container>
         <h2 className='font-jost font-medium text-[26px] md:text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 

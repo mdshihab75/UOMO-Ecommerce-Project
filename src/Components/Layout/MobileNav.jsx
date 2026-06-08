@@ -27,7 +27,7 @@ const MobileNav = () => {
                 <span className='font-jost bg-third-color rounded-full px-1.25 font-medium text-[10px] text-primary-white absolute bottom-0 left-3'>{cartItems}</span>
             </div>
             {
-                <div className={`absolute top-0 ${mobileMenu ? "left-0" : "-left-[100%]"} w-full h-screen bg-primary-white z-50 duration-500`}>
+                <div className={`absolute top-0 ${mobileMenu ? "left-0" : "-left-full"} w-full h-screen bg-primary-white z-50 duration-500`}>
                     <button className='absolute right-5 top-5' onClick={() => setmobileMenu(false)}>
                         <IoMdClose size={30} />
                     </button>
