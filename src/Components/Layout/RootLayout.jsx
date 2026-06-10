@@ -7,6 +7,7 @@ import MobileTrandyProducts from './MobileTrandyProducts'
 import MobileSpringCollection from './MobileSpringCollection'
 
 
+
 const RootLayout = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const RootLayout = () => {
     <MobileNavigation/>
     <MobileTrandyProducts/>
     <MobileSpringCollection/>
+    
     {/*<Footer/>*/}
     </>
   )

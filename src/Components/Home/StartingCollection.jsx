@@ -4,6 +4,7 @@ import StartingImage from '../../assets/Images/startingimage.png'
 import StartingImage2 from '../../assets/Images/startingimage2.png'
 import Image from '../Common/Image'
 import { Link } from 'react-router'
+
 const StartingCollection = () => {
   return (
     <section className='mt-25'>

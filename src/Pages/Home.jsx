@@ -14,8 +14,8 @@ const Home = () => {
     <Category/>
     <TrendyProducts/>
     <SpringCollection/>
-    {/*<StartingCollection/>
-    <LimitedProduct/>
+    <StartingCollection/>
+    {/*<LimitedProduct/>
     <InstagramCard/>*/}
     </>
   )
