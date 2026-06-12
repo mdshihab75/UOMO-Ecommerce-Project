@@ -6,10 +6,10 @@ import Image from '../Common/Image'
 import { Link } from 'react-router'
 const MobileStartingCollection = () => {
   return (
-    <section className='mt-25'>
+    <section className='mt-3.75 md:mt-25 block md:hidden'>
       <Container>
-        <div className='flex gap-7.5'>
-          <div className='w-1/2 relative group'>
+        <div className='flex flex-wrap md:flex gap-3.75 md:gap-7.5 mx-3.75 md:mx-0'>
+          <div className='w-full md:w-1/2 relative group'>
             <Image className='h-99.5 ml-auto' src={StartingImage} />
             <div className='absolute top-0 left-0 w-full h-full group-hover:bg-red-700/85 duration-300 z-50'>
               <div className='absolute z-1 left-12.5 bottom-12.5 w-full'>
@@ -22,7 +22,7 @@ const MobileStartingCollection = () => {
             </div>
           </div>
 
-          <div className='w-1/2 relative group'>
+          <div className='w-full md:w-1/2 relative group'>
             <Image className='h-99.5 ml-auto' src={StartingImage2} />
             <div className='absolute top-0 left-0 w-full h-full group-hover:bg-red-700/85 duration-300 z-50'>
               <div className='absolute z-1 left-12.5 bottom-12.5 w-full'>

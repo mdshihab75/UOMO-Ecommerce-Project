@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import SliderLib from "react-slick";
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 
-
 const LimitedProduct = () => {
     const [products, setProducts] = useState([])
     const Slider = SliderLib.default || SliderLib;
@@ -57,7 +56,7 @@ function getProducts() {
   
 
   return (
-    <section className='mt-22.75'>
+    <section className='mt-9.25 md:mt-22.75'>
         <Container>
             <h2 className='font-jost font-normal text-[35px] text-primary-black text-center mb-8.25'>LIMITED <span className='font-bold'>EDITION</span></h2>
             <Slider {...settings} className='bg-transparent'>

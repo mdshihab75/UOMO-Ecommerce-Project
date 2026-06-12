@@ -34,7 +34,7 @@ const MobileNav = () => {
                     <ul className="flex flex-col gap-10 p-10">
                         {
                             navitems?.map((items) => (
-                                <li className="list-item" key={items.Id}>
+                                <li className="mobile-items" key={items.Id}>
                                     <Link to={items.url}>{items.Name}</Link>
                                 </li>
                             ))

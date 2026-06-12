@@ -6,10 +6,10 @@ import SCimage from '../../assets/Images/SpringCollection.png'
 import Countdown from 'react-countdown';
 const MobileSpringCollection = () => {
   return (
-    <section className='mt-12.5 md:mt-25 bg-seventh-color mx-3.75 md:mx-15 pt-18.5 md:pt-0 py-7 md:hidden'>
+    <section className='mt-12.5 bg-seventh-color mx-3.75 pt-18.5 py-6 md:hidden'>
             <Container>
                 <div className='flex justify-between items-end'>
-                    <div>
+                    <div className=''>
                         <h3 className='font-jost font-medium text-sm leading-6 text-sixth-color after:content-[ ] after:w-10 after:h-0.5 after:absolute after:-left-15 after:top-2 after:bg-sixth-color relative ml-16.5'>DEAL OF THE WEEK</h3>
                         <h2 className='font-jost font-normal text-[30px] md:text-[70px] text-primary-black mt-2.25'>
                             <span className='font-bold'>Spring </span>Collection

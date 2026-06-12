@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 
 const StartingCollection = () => {
   return (
-    <section className='mt-25'>
+    <section className='mt-25 hidden md:block'>
       <Container>
         <div className='flex gap-7.5'>
           <div className='w-1/2 relative group'>
