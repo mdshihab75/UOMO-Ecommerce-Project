@@ -120,10 +120,10 @@ const SortAndView = ({ setView }) => {
 
             <div className="flex flex-wrap gap-6.25 mt-5.75 gap-x-10">
               {colors.map((color, index) => (
-                <div
+                <button
                   key={index}
-                  className={`w-4 h-4 rounded-full cursor-pointer ${color}`}
-                ></div>
+                  className={`w-4 h-4 rounded-full cursor-pointer focus:outline-3 focus:outline-primary-black ${color}`}
+                ></button>
               ))}
             </div>
           </div>

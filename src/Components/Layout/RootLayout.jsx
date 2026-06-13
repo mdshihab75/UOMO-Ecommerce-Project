@@ -17,9 +17,9 @@ const RootLayout = () => {
     <Header/>
     <Outlet/>
     <MobileNavigation/>
-    <MobileTrandyProducts/>
+    {/* <MobileTrandyProducts/>
     <MobileSpringCollection/>
-    <MobileStartingCollection/>
+    <MobileStartingCollection/> */}
     
     {/*<Footer/>*/}
     </>
