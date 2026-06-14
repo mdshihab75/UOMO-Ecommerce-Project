@@ -3,7 +3,7 @@ import Image from './Image'
 import ProductImage from '../../Assets/Images/productimage.png'
 const Product = ({ item }) => {
     return (
-        <div className='max-w-82.5 relative '>
+        <div className='max-w-82.5 relative'>
             <div className='group'>
                 <Image className='w-full' src={item.thumbnail || ProductImage} alt="Product" />
                 <div className='bg-white shadow shadow-gray-100 group-hover:bottom-30 duration-200 group-hover:visible text-center absolute w-full md:w-77.5 left-2/4 translate-x-[-50%] pt-4 pb-2.5 bottom-20 visible md:invisible'>

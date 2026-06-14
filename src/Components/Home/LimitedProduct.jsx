@@ -40,6 +40,7 @@ function SamplePrevArrow(props) {
     prevArrow: <SamplePrevArrow />
 }
 
+
 function getProducts() {
     axios.get("https://dummyjson.com/products").then((res) => {
       setProducts(res.data.products)
