@@ -23,7 +23,6 @@ const Home = () => {
     <StartingCollection/>
     <MobileStartingCollection/>
     <LimitedProduct/>
-  
     <InstagramCard/>
     </>
   )
