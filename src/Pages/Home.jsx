@@ -9,6 +9,7 @@ import InstagramCard from '../Components/Home/InstagramCard';
 import MobileTrandyProducts from '../Components/Layout/MobileTrandyProducts';
 import MobileSpringCollection from '../Components/Layout/MobileSpringCollection';
 import MobileStartingCollection from '../Components/Layout/MobileStartingCollection';
+import Footer from '../Components/Layout/Footer';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
     <MobileStartingCollection/>
     <LimitedProduct/>
     <InstagramCard/>
+    <Footer/>
     </>
   )
 }

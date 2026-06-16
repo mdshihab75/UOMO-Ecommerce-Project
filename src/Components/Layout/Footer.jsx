@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className='bg-ftbg pt-25'>
       <Container>
-        <div className='flex justify-between'>
+        <div className='flex flex-row gap-10 justify-between'>
           <div>
           <Link to='/'>
           <Image className='pb-11.25' src='/public/Images/logo.png'/>
