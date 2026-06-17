@@ -7,9 +7,9 @@ import { FaTwitter, FaYoutube } from "react-icons/fa6"
 import SecurePaymentsImage from '../../assets/images/payment.png'
 const Footer = () => {
   return (
-    <footer className='bg-ftbg pt-25'>
+    <footer className='bg-ftbg pt-25 pb-15.5 md:pb-0 mx-3.75 md:mx-0'>
       <Container>
-        <div className='flex flex-row gap-10 justify-between'>
+        <div className='flex-col flex md:flex-row gap-12.5 md:justify-between'>
           <div>
           <Link to='/'>
           <Image className='pb-11.25' src='/public/Images/logo.png'/>
@@ -38,7 +38,8 @@ const Footer = () => {
                 </a>
               </div>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex justify-between md:flex-row md:gap-30'>
+          <div className='flex flex-col'>
           <h3 className='font-jost font-medium text-[18px] text-primary-black mb-6.75'>COMPANY</h3>
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[40%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300' href="">About Us</a>
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[40%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300' href="">Careers</a>
@@ -54,6 +55,7 @@ const Footer = () => {
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:w-0 hover:after:w-[40%] after:h-0.5 after:bg-primary-black after:absolute after:bottom-0 after:left-0 after:duration-300' href="">Women</a>
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:w-0 hover:after:w-[40%] after:h-0.5 after:bg-primary-black after:absolute after:bottom-0 after:left-0 after:duration-300' href="">Shop All</a>
         </div>
+        </div>
         <div className='flex flex-col'>
           <h3 className='font-jost font-medium text-[18px] text-primary-black mb-6.75'>HELP</h3>
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[40%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300' href="">Customer Service</a>
@@ -64,19 +66,19 @@ const Footer = () => {
           <a className='font-jost font-normal text-sm leading-10 text-primary-black relative after:content-[""] after:absolute after:bg-primary-black after:w-0 hover:after:w-[40%] after:h-0.5 after:left-0 after:bottom-0 after:duration-300' href="">Gift Card</a>
         </div>
         {/* SUBSCRIBE div */}
-        <div className='flex flex-col w-82.5'>
+        <div className='flex flex-col w-95.75'>
           <h3 className='font-jost font-medium text-[18px] text-primary-black mb-6.75'>SUBSCRIBE</h3>
           <p className='font-jost font-normal text-sm leading-6 text-primary-black'>Be the first to get the latest news about trends,</p>
           <p className='font-jost font-normal text-sm leading-6 text-primary-black mb-3.75'>promotions, and much more!</p>
           {/* input div  */}
-          <div className='bg-primary-white flex items-center justify-between pr-5.25 pl-5.25 pt-4.25 pb-3.5'>
+          <div className='bg-primary-white w-68.75 md:w-full flex items-center justify-between pr-5.25 pl-5.25 pt-4.25 pb-3.5'>
             <form action="">
               <input type="email" placeholder="Your email address" className="bg-primary-white outline-none border-none font-jost font-normal text-sm text-primary-black leading-6 placeholder:text-primary-black" />
             </form>
-            <button type='submit' className='font-jost font-medium text-sm leading-6 text-primary-black'>JOIN</button>
+            <button type='submit' className='font-jost font-medium text-sm leading-6 text-primary-black '>JOIN</button>
           </div>
           <p className='font-jost font-medium text-[15px] pt-10.25 pb-2.75 text-primary-black'>Secure payments</p>
-              <img src={SecurePaymentsImage} alt="" />
+              <img className='w-75 md:w-full' src={SecurePaymentsImage} alt="" />
         </div>
         </div>
         {/* light line divider */}
@@ -84,13 +86,13 @@ const Footer = () => {
             <div className='max-w-full bg-[#CFCDCD] p-px'></div>
           </div>
           {/* End Text  */}
-          <div className='flex justify-between pb-7'>
+          <div className='flex flex-wrap md:flex-nowrap justify-between pb-7'>
           <div className='flex gap-2 items-center'>
               <h3 className='font-jost font-normal text-sm leading-6 text-primary-black flex items-center'>
                 ©2026 Uomo 
               </h3>
               </div>
-              <div className='flex items-center'>
+              <div className='flex items-center flex-wrap md:flex-nowrap'>
               <h4 className='font-jost font-normal text-sm leading-6 text-secondColor pr-6.75'>Language</h4>
               <h4 className='font-jost font-normal text-sm leading-6 text-primary-black pr-4'>United Kingdom  |  English</h4>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,3 +111,6 @@ const Footer = () => {
 }
 
 export default Footer
+
+{/*MobileFooter */}
+

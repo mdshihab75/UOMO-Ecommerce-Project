@@ -36,7 +36,7 @@ const InstagramCard = () => {
                 <div className='flex flex-wrap gap-3.75 md:gap-1 justify-center'>
                     {
                         images?.map((item, index) => (
-                            <img className='w-[22%] md:w-auto' key={index} src={item} alt="card-image" />
+                            <img className='w-[27%] md:w-auto' key={index} src={item} alt="card-image" />
                         ))
                     }
                 </div>

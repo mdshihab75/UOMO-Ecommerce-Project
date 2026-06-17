@@ -27,6 +27,7 @@ function SamplePrevArrow(props) {
     ><TfiAngleLeft className='text-[25px]'/></div>
   );
 }
+  
 
     const settings = {
     dots: false,
