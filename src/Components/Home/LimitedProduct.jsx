@@ -38,8 +38,20 @@ function SamplePrevArrow(props) {
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+
+    Responsive: [
+    {
+      breakpoint: 768, // md এর নিচে
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+  ]
 }
+
 
 
 function getProducts() {
@@ -58,7 +70,7 @@ function getProducts() {
   
 
   return (
-    <section className='mt-9.25 md:mt-22.75'>
+    <section className='mt-9.25 md:mt-22.75 hidden md:block'>
         <Container>
             <h2 className='font-jost font-normal text-[35px] text-primary-black text-center mb-8.25'>LIMITED <span className='font-bold'>EDITION</span></h2>
             <Slider {...settings} className='bg-transparent'>
