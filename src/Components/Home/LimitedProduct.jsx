@@ -9,7 +9,7 @@ import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 const LimitedProduct = () => {
     const [products, setProducts] = useState([])
     const Slider = SliderLib.default || SliderLib;
-
+    
 function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
@@ -40,13 +40,15 @@ function SamplePrevArrow(props) {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
 
-    Responsive: [
+    responsive: [
     {
-      breakpoint: 768, // md এর নিচে
+      breakpoint: 667, // md এর নিচে
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
+        nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
       }
     }
   ]
@@ -70,15 +72,17 @@ function getProducts() {
   
 
   return (
-    <section className='mt-9.25 md:mt-22.75 hidden md:block'>
+    <section className='mt-9.25 md:mt-22.75 '>
         <Container>
             <h2 className='font-jost font-normal text-[35px] text-primary-black text-center mb-8.25'>LIMITED <span className='font-bold'>EDITION</span></h2>
             <Slider {...settings} className='bg-transparent'>
-                {
-                products?.map((item) => (
-                    <Product key={item.id} item={item}/>
-                ))
-            }
+                
+                 
+  {products.map((item) => (
+    <Product  key={item.id} item={item} />
+  ))}
+
+                
             </Slider>    
         </Container>
     </section>

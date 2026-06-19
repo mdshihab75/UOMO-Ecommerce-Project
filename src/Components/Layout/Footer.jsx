@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='flex-col flex md:flex-row gap-12.5 md:justify-between'>
           <div>
           <Link to='/'>
-          <Image className='pb-11.25' src='/public/Images/logo.png'/>
+          <Image className='pb-11.25' src='Images/logo.png'/>
           </Link>
           <p className='font-jost font-normal text-sm leading-6 text-primary-black'>1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
               <p className='font-jost font-normal text-sm leading-6 text-primary-black pb-9.25'>United States</p>

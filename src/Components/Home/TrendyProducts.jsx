@@ -46,7 +46,7 @@ const TrendyProducts = () => {
   }
 
   return (
-    <section className='mt-25'>
+    <section className='mt-25 hidden md:block'>
       <Container>
         <h2 className='font-jost font-medium text-[35px] text-primary-black text-center'>OUR TRENDY <span className='font-bold'>PRODUCTS</span></h2>
 
@@ -59,7 +59,7 @@ const TrendyProducts = () => {
           }
         </ul>
 
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-x-7.5 gap-y-15 mt-10'>
+        <div className='grid grid-cols-4 gap-x-7.5 gap-y-15 mt-10'>
           {category == "all"
             ? productLimit.map((item) => <Product item={item} key={item.id} />)
             : filterProduct.map((item) => (<Product item={item} key={item.id} />))}
