@@ -20,4 +20,4 @@ export const productCategory = [
         name: "groceries",
     },
     
-]
+]           
